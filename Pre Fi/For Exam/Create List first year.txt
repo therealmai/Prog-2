@@ -1,0 +1,16 @@
+PList createFirstYearList(PList L){
+	
+PList temp, newList= NULL, *newTrav, oldTrav;
+
+for(oldTrav = L ; oldTrav != NULL ; oldTrav = oldTrav -> next){
+         if(oldTrav->student.yrLevel == 1){
+		for(newTrav = &newList; (*newTrav) != NULL && oldTrav->student.ID > (*newTrav)->student.ID; newTrav = &(*newTrav)->next){}
+			temp = (PList)malloc(sizeof(struct node));
+			temp->student = oldTrav->student;
+			temp->next = *newTrav;
+			*newTrav = temp;
+            }
+	
+	}
+	return newList;
+}
