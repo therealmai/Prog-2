@@ -1,0 +1,4 @@
+Tarongan Exercise 1
+Review Exercise 2
+Make a function that will store all of the consonants in another array
+Ctype and string funct on exercise 1
